@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html lang="en" ng-app="store">
+    <head>
+        <meta charset="utf-8">
+        <title>My HTML File</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+        <script src="js/controllers.js"></script>
+    </head>
+    <body ng-controller="DisplayController as display">
+        <h2>Список продукции</h2>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Предмет</th>
+                    <th>Цена</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="product in display.products" ng-show="product.presence">
+                    <td>{{product.purchase}}</td>
+                    <td>{{product.price}}</td>
+                </tr>
+            </tbody>
+        </table>
+        <script src="js/model.js"></script>
+        <script src="js/app.js"></script>
+    </body>
+</html>
